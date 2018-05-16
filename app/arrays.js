@@ -2,11 +2,13 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
-
+   return arr.indexOf(item);
   },
 
   sum: function(arr) {
-
+    return arr.reduce(function (sum, current) {
+      return sum + current;
+    }, 0);
   },
 
   remove: function(arr, item) {
