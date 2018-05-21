@@ -10,11 +10,12 @@ exports.regexAnswers = {
   },
 
   endsWithVowel: function(str) {
-
+    return (/[aeiou]$/i).test(str);
   },
 
   captureThreeNumbers: function(str) {
-
+    var matches = (/\d{3}/).exec(str);
+    return matches ? matches[0] : false;
   },
 
   matchesPattern: function(str) {

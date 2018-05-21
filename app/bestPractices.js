@@ -10,7 +10,7 @@ exports = typeof window === 'undefined' ? global : window;
 exports.bestPracticesAnswers = {
   globals: function() {
     window["myObject"] = {
-          name: 'Jory'
+          name : 'Jory'
         };
 
         return window.myObject;

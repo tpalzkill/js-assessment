@@ -2,35 +2,35 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.stringsAnswers = {
   reduceString: function(str, amount) {
-    var finalString = '', cL = '', counter;
-      str.split('').forEach(function(i){
-          if (i !== cL) counter = 0;
+    let final = '', last = '', counter;
+      str.split('').forEach( character => {
+          if (character!== last) counter = 0;
           counter++;
-          cL = i;
-          if (counter <= amount ) finalString = finalString + i;
+          last = each;
+          if (counter <= amount ) final = final + i;
       });
-      return finalString;
+      return final;
   },
 
   wordWrap: function(str, cols) {
-    var formatedString = '',
-      wordsArray = [];
+    let formated = '',
+      words = [];
 
-    wordsArray = str.split(' ');
+    words = str.split(' ');
 
-    formatedString = wordsArray[0];
-    wordsArray.forEach(word => {
+    formated = words[0];
+    words.forEach( word => {
       if (word.length > cols) {
-        formatedString += '\n' + word;
+        formated += '\n' + word;
       } else {
-        if (formatedString.length + word.length > cols) {
-          formatedString += '\n' + word;
+        if (formated.length + word.length > cols) {
+          formated += '\n' + word;
         } else {
-          formatedString += ' ' + word;
+          formated += ' ' + word;
         }
       }
     })
-    return formatedString;
+    return formated;
   },
 
   reverseString: function(str) {
